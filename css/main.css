@@ -1,6 +1,5 @@
 body {
 	background:#333745;
-    padding: 2em;
 	height:100%;
 }
 
@@ -16,17 +15,44 @@ h1 {
     text-align: center;
 }
 
+#loginBG {
+	position:fixed;
+	top:25%;
+	width:100%;
+}
+
 #loginArea {
 	position:relative;
 	width:578px;
-	margin-top:15%;
 	margin-left:auto;
 	margin-right:auto;
 	padding:50px 110px 50px 110px;
 	background:rgba(218,237,226,0.2);
+	clear:both;
+	overflow:auto;
 }
 
-#auth {
+#loginArea #logo {
+	float:left;
+}
+
+#loginArea #authArea {
+	float:right;
+	width:319px;
+	padding-top:80px;
 	margin-left:50px;
+} 
+
+#loginArea #authArea p {
+	font-family:Georgia;
+	font-size:27px;
+	padding:7px 0;
+	margin:0px;
+	font-weight:thin;
+	font-style:italic;
+	color:white;
+}
+#loginArea #authArea img {
+	margin-top:25px;
 }
 
