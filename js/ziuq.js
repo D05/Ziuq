@@ -12,5 +12,5 @@ exports.init = function() {
         console.log("Running quiz");
 
         quiz.run('#quiz');
-    }, 5000);
+    }, 0001);
 }
