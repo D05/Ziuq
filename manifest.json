@@ -1,0 +1,19 @@
+{
+	"BundleType": "Application",
+	"BundleVersion": "0.0.1",
+    "VendorIdentifier": "com.d05.",
+	"BundleIdentifier": "ziuq",
+	"AppIcon": {
+		"36x18": "ziuq.png"
+	},
+	"AppName": {
+		"en": "Ziuq"
+	},
+	"AppDescription": {
+		"en": "Ziuq - Quiz about music"
+	},
+	"SupportedLanguages": [
+		"en"
+	],
+	"RequiredPermissions": []
+}
