@@ -5,6 +5,7 @@ var sp = getSpotifyApi();
 
 var authentication = sp.require('js/authentication');
 var countdown      = sp.require('js/countdown');
+var quiz_selector  = sp.require('js/quiz_selector');
 
 var maindiv;
 
@@ -14,7 +15,9 @@ exports.run = function(el) {
 
     authentication.run(maindiv, function (fbToken) {
         countdown.run(maindiv, function() {
-            maindiv.html("now we run the quiz");
+            quiz_selector.run(maindiv, function(quiz) {
+                maindiv.html(quiz.name);
+            });
         });
     });
 
