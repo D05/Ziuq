@@ -7,5 +7,5 @@ exports.fetchInto = function(maindiv, template_name, cbk) {
     $.get('sp://ziuq/html/' + template_name + '.html', function(res) {
         $(maindiv).html(res);
         cbk();
-    });
+    }, 'text');
 }
