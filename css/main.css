@@ -15,6 +15,10 @@ h1 {
     text-align: center;
 }
 
+/*
+ * Login-view
+======================================================== */
+
 #loginBG {
 	position:fixed;
 	top:25%;
@@ -52,7 +56,40 @@ h1 {
 	font-style:italic;
 	color:white;
 }
+
 #loginArea #authArea img {
 	margin-top:25px;
 }
+
+/*
+ * Question-view
+======================================================== */
+
+.questionArea {
+	clear:both;
+} 
+
+.questionArea -> img {
+	float:left;
+}
+
+.questionArea -> div {
+	float:left;
+	margin-left:20px;
+}
+
+
+.mainArea {
+	text-align:center;
+	padding:15px;
+}
+
+.contentArea {
+	text-align:left;
+	margin:15px 40px 0 40px;
+	padding:20px;
+	background:rgba(218,237,226,0.2);
+}
+
+
 
