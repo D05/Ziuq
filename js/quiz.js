@@ -3,14 +3,11 @@ var sp = getSpotifyApi();
 // var views  = sp.require('sp://import/scripts/api/views');
 // var auth   = sp.require('sp://import/scripts/api/auth');
 
-quiz = sp.require('js/quiz');
+var maindiv;
 
-exports.init = function() {
-    console.log("zuiq#init");
+// Quiz initialize
+exports.run = function(el) {
+    maindiv = $(el);
 
-    setTimeout(function() {
-        console.log("Running quiz");
-
-        quiz.run('#quiz');
-    }, 5000);
+    maindiv.append("We're up!");
 }
