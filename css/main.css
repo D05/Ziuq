@@ -1,5 +1,7 @@
 body {
+	background:#333745;
     padding: 2em;
+	height:100%;
 }
 
 h1 {
@@ -13,3 +15,18 @@ h1 {
     font-size: 30pt;
     text-align: center;
 }
+
+#loginArea {
+	position:relative;
+	width:578px;
+	margin-top:15%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:50px 110px 50px 110px;
+	background:rgba(218,237,226,0.2);
+}
+
+#auth {
+	margin-left:50px;
+}
+
