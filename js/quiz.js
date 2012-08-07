@@ -7,7 +7,7 @@ var authentication = sp.require('js/authentication');
 var countdown      = sp.require('js/countdown');
 var quiz_selector  = sp.require('js/quiz_selector');
 var quizzer        = sp.require('js/quizzer');
-var kill_screen     = sp.require('js/kill_screen');
+var kill_screen    = sp.require('js/kill_screen');
 
 var maindiv;
 
@@ -25,12 +25,12 @@ exports.run = function(el) {
     quiz_selector.run(maindiv, function(quiz) {
 
     // Run the quiz
-    quizzer.run(maindiv, quiz, function(quiz, cntTotal, cntCorrect, cntIncorrect) {
+    quizzer.run(maindiv, quiz, function(quiz, score, cntTotal, cntCorrect, cntIncorrect) {
 
     // show killscreen
     var results = {
         'cntTotal': cntTotal, 'cntCorrect': cntCorrect, 'cntIncorrect': cntIncorrect,
-        'quiz': quiz, 'fbToken': fbToken
+        'score': score, 'quiz': quiz, 'fbToken': fbToken
     }
     kill_screen.run(maindiv, results, function() {
         maindiv.html("It's all over, why did we get here?");
