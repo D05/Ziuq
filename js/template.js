@@ -3,8 +3,9 @@
 // var views  = sp.require('sp://import/scripts/api/views');
 // var auth   = sp.require('sp://import/scripts/api/auth');
 
-exports.fetchInto = function(maindiv, template_name) {
+exports.fetchInto = function(maindiv, template_name, cbk) {
     $.get('sp://ziuq/html/' + template_name + '.html', function(res) {
         $(maindiv).html(res);
+        cbk();
     });
 }
