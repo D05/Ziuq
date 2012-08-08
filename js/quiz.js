@@ -37,12 +37,21 @@ exports.run = function(el) {
     countdown.run(maindiv, quiz, function() {
 
     // Run the quiz
-    quizzer.run(maindiv, quiz, function(score, cntTotal, cntCorrect, cntIncorrect) {
+    quizzer.run(maindiv, quiz, function(scores,  times) {
+
+    var score = 0;
+    scores.forEach(function(s) { score += s; });
 
     // show killscreen
     var results = {
-        'cntTotal': cntTotal, 'cntCorrect': cntCorrect, 'cntIncorrect': cntIncorrect,
-        'score': score, 'quiz': quiz, 'fbToken': fbToken
+        'scores':       scores,
+        'times':        times,
+        'cntTotal':     scores.length,
+        'cntCorrect':   scores.filter(function(s) { return (s != 0); }).length,
+        'cntIncorrect': scores.filter(function(s) { return (s == 0); }).length,
+        'score':        score,
+        'quiz':         quiz,
+        'fbToken':      fbToken
     }
     kill_screen.run(maindiv, results, function() {
         maindiv.html("It's all over, why did we get here?");
