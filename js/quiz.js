@@ -18,11 +18,11 @@ exports.run = function(el) {
     // Auth to facebook
     authentication.run(maindiv, function (fbToken) {
 
-    // Fancy countdown/splash screen
-    countdown.run(maindiv, function() {
-
     // Select a quiz
     quiz_selector.run(maindiv, function(quiz) {
+
+    // Fancy countdown/splash screen
+    countdown.run(maindiv, function() {
 
     // Run the quiz
     quizzer.run(maindiv, quiz, function(quiz, score, cntTotal, cntCorrect, cntIncorrect) {
