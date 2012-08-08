@@ -33,7 +33,7 @@ exports.run = function(maindiv, quiz, cbk) {
     callback = cbk;
 
 	template.fetchInto(maindiv, "countdown", function(){
-		$('#quiz_name').attr('src', quiz.image);
+		$('#genre').attr('src', quiz.image);
 		cntdiv = $("#countDownNumber");
 		
 	    //default_fontsize = cntdiv.css('font-size');
