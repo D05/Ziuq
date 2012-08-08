@@ -11,6 +11,10 @@ var now = function() {
 
 exports.run = function(maindiv, quiz, questionNo, cntTotal, question, cbks) {
     var track = models.Track.fromURI(question.song);
+    if (!track.playable) {
+        maindiv.html('TRACK NOT FOUND!?!?');
+        return;
+    }
     var duration = track.duration;
 
 
