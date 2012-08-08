@@ -10,13 +10,13 @@ var quiz_questions = sp.require('js/quiz_questions');
 exports.run = function(maindiv, cbk) {
     template.fetchInto(maindiv, 'quiz_selector', function() {
         quiz_questions.quizzes.forEach(function(quiz) {
-            var div = $('<div class="quiz quiz-' + quiz.id + '"><h2>' + quiz.name + '</h2></div>');
+            var div = $('<img class="quiz" src="' + quiz.image + '">');
             div.data('quiz', quiz);
 
             $('#quizzes').append(div);
         });
 
-        $('#quizzes div.quiz').click(function(e) {
+        $('#quizzes img.quiz').click(function(e) {
             cbk($(this).data('quiz'));
         });
     });

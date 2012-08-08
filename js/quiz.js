@@ -22,7 +22,7 @@ exports.run = function(el) {
     quiz_selector.run(maindiv, function(quiz) {
 
     // Fancy countdown/splash screen
-    countdown.run(maindiv, function() {
+    countdown.run(maindiv, quiz, function() {
 
     // Run the quiz
     quizzer.run(maindiv, quiz, function(quiz, score, cntTotal, cntCorrect, cntIncorrect) {
