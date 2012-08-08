@@ -131,6 +131,7 @@ h1 {
 
 #quizzes img {
 	margin:0 15px 30px;
+    cursor: pointer;
 }
 
 #countdownContent {
