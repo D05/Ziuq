@@ -29,7 +29,7 @@ exports.run = function(el) {
     countdown.run(maindiv, quiz, function() {
 
     // Run the quiz
-    quizzer.run(maindiv, quiz, function(quiz, score, cntTotal, cntCorrect, cntIncorrect) {
+    quizzer.run(maindiv, quiz, function(score, cntTotal, cntCorrect, cntIncorrect) {
 
     // show killscreen
     var results = {

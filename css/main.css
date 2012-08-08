@@ -85,6 +85,7 @@ h1 {
 	min-width:240px;
 	background:#daede2;
 	vertical-align:bottom;
+    cursor: pointer;
 }
 
 #questionContent p, #questionContent span {
@@ -125,6 +126,7 @@ h1 {
 
 #quizzes img {
 	margin:0 15px 30px;
+    cursor: pointer;
 }
 
 #countdownContent {
