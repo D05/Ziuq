@@ -39,6 +39,8 @@ exports.run = function(maindiv, quiz, questionNo, cntTotal, question, cbks) {
 
         $('.answer').click(function() {
             clearTimeout(timeout_id);
+            $('.mainArea').css('display', 'none');
+
             if (answered) { return; }
             answered = true;
 
