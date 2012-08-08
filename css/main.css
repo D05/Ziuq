@@ -210,5 +210,10 @@ li {
 	margin:5px 0;
 }
 
+#leftArea img:hover {
+	opacity:0.5;
+	cursor:pointer;
+}
+
 
 
