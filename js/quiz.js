@@ -22,11 +22,12 @@ exports.run = function(el) {
 	$('#bodyArea').html(mainHTML);
 	if(localStorage.FbaccessToken)
 	{
-		var fbURL = "https://graph.facebook.com/me/picture?access_token=" + localStorage.FbaccessToken;
-		$.get(fbURL, function(d) {
-			console.log("hej");
-			//$("#profPic").attr('src', d.data.url);
-		});
+		var fbURL = "https://graph.facebook.com/me/picture?type=large&access_token=" + localStorage.FbaccessToken;
+		$("#profPic").attr('src', fbURL);
+		/*$.get(fbURL, function(d) {
+			console.log(d);
+			$("#profPic").attr('src', d.data.url);
+		});*/
 	}
 	maindiv = $(el);	
 		
