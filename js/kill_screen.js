@@ -46,6 +46,13 @@ exports.run = function(maindiv, results, cbk) {
            	console.log(Math.round(s));
            	console.log(results.times[i]);
        });
+	   
+		$("#resTable").append(''+
+			'<tr>' +
+				'<td colspan="3" align="right"><p class="time">Total</p></td>'+
+				'<td class="resBG"><p>'+ results.score +'</p></td>'+
+			'</tr>'
+			);
 
        $('#save_playlist').click(function() {
            var button = $(this);
