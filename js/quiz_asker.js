@@ -26,10 +26,8 @@ exports.run = function(questionNo, cntTotal, question, cbks) {
         $('#D').data('num', 4);
 
         var time = now();
-        var timeout_id = setTimeout(function() { cbks.onIncorrect(); cbks.onComplete(); }, track.duration);
         $('.answer').click(function() {
             $('.answer').unbind('click');
-            clearTimeout(timeout_id);
             var answer = $(this);
             var answer_num = answer.data('num');
 
