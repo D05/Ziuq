@@ -15,6 +15,7 @@ exports.run = function(questionNo, cntTotal, question, cbks) {
         $('#questionNumber').text(questionNo + ' av ' + cntTotal);
         $('#questionText').html(question.question);
 
+        $('.answer').css('background', '#DAEDE2')
         $('#A .answerText').html(question.alternatives[1]);
         $('#A').data('no', 1);
         $('#B .answerText').html(question.alternatives[2]);
@@ -34,11 +35,23 @@ exports.run = function(questionNo, cntTotal, question, cbks) {
             if (answer.data('no') == question.correct_answer) {
                 var timediff = (now() - time) / 1000.0;
                 cbks.onCorrect(timediff);
+                answer.css('background', 'rgb(119,211,125)');
+                setTimeout(function() { cbks.onComplete(); }, 500);
             } else {
                 cbks.onIncorrect();
+                answer.css('background', 'rgb(210,107,90)');
+                $('.answer').each(function(i,a) {
+                    var a = $(a);
+                    if (a.data('no') == question.correct_answer)
+                    {
+                        setTimeout(function() {
+                            a.css('background', 'rgb(119,211,125)');
+                            setTimeout(function() { cbks.onComplete(); }, 500);
+                        }, 500);
+                    }
+                });
             }
 
-            cbks.onComplete();
         });
     });
 
