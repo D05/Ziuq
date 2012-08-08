@@ -9,10 +9,13 @@ var dummyQuestionSet = [
 						 4: 'The Stooges'}
     },
     {
-        'song': 'spotify:track:2f7sZFUET4uJK83Kw12e1b',
-        'question': 'Question 2?',
-        'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'song': 'spotify:track:4uOKFydzAejjSFqYbv1XPt',
+        'question': 'How many members are there in UB40?',
+        'correct_answer': 4,
+        'alternatives': {1: '5',
+ 						 2: '7', 
+						 3: '4', 
+						 4: '10'}
     },
     {
         'song': 'spotify:track:6IDSsDe2djAozaqGISYQ4T',
