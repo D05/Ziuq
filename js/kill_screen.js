@@ -15,13 +15,14 @@ exports.run = function(maindiv, results, cbk) {
        $('#cntIncorrect').html(results.cntIncorrect);
        $('#cntCorrect').html(results.cntCorrect);
        $('#score').html(Math.round(results.score));
+	   $("#genreRes").attr('src', results.quiz.image);
        results.scores.forEach(function(s, i) {
            	var alts = questions[i].alternatives;
 			
 			if(s == 0)
 			{
-				var resultClass = "failBG";
-				var time = "";
+				var resultClass = "failureBG";
+				var time = '<p class="time">-</p>';
 			}
 			else
 			{

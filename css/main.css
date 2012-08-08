@@ -54,7 +54,7 @@ h1 {
 	margin:0px;
 	font-weight:thin;
 	font-style:italic;
-	color:white;
+	color:rgb(218,237,226);
 }
 
 #loginArea #authArea img {
@@ -94,12 +94,12 @@ h1 {
 }
 
 #questionContent p {
-	color:white;
+	color:rgb(218,237,226);
 	margin-bottom:20px;
 }
 
 #questionContent span {
-	color:black;
+	color:#333745;
 	margin-left:10px;
 }
 
@@ -137,7 +137,7 @@ h1 {
 #countDownNumber {
 	font-family:"Lucida Grande";
 	font-size:117px;
-	color:white;
+	color:rgb(218,237,226);
 }
 
 #profPic {
@@ -163,12 +163,16 @@ h1 {
 	float:left;
 }
 
-#failureBG {
+.failureBG {
 	background:rgb(210,107,90);
 }
 
-#successBG {
+.successBG {
 	background:rgb(119,211,125);
+}
+
+#resTable {
+	margin-top:10px;
 }
 
 #resTable td {
@@ -176,16 +180,27 @@ h1 {
 	margin:1px;
 	font-family:"Lucida Grande";
 	font-size:20px;
-	color:black;
+	color:#333745;
+}
+
+#resTable td p {
+	margin:0px;
+	padding:10px;
 }
 
 .time {
 	font-size:15px !important;
-	color:white;
+	color:rgb(218,237,226);
 }
 
 .resBG {
 	background:#daede2;
+}
+
+#save_playlist {
+	position:relative;
+	left:-180px;
+	top:-10px;
 }
 
 
