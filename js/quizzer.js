@@ -8,11 +8,9 @@ var quiz_asker = sp.require('js/quiz_asker');
 var template = sp.require('js/template');
 
 var i = 0;
-var cntCorrect = 0;
-var cntIncorrect = 0;
-var score = 0;
 
 var questions;
+var scores = new Array;
 
 var callback;
 
@@ -24,14 +22,15 @@ var tick = function(maindiv, quiz, cbk) {
 
         quiz_asker.run(i, questions.length, question, {
             onCorrect:   function(time) {
-                cntCorrect = cntCorrect + 1;
-                score = score + (100.0/time);
+                scores.push(100.0/time);
             },
-            onIncorrect: function() { cntIncorrect = cntIncorrect + 1; },
+            onIncorrect: function() {
+                scores.push(0);
+            },
             onComplete:  function() { tick(); },
         });
     } else {
-        callback(score, questions.length, cntCorrect, cntIncorrect);
+        callback(scores);
     }
 }
 
