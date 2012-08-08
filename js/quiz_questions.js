@@ -18,28 +18,37 @@ var dummyQuestionSet = [
 						 4: '10'}
     },
     {
-        'song': 'spotify:track:6IDSsDe2djAozaqGISYQ4T',
-        'question': 'Question 3?',
-        'correct_answer': 1,
+        'song': 'spotify:track:1nbMkRhfldXcmCyB83x8lK',
+        'question': 'What was A-ha`s Pal Waaktarr nickname at school?',
+        'correct_answer': 2,
         'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
     },
     {
-        'song': 'spotify:track:3nGesmpMv24ZK8ylxAkQkR',
-        'question': 'Question 4?',
+        'song': 'spotify:track:5eKgyCFiu3j5BFpkbUCFwX',
+        'question': 'Who is the guitar player and chief songwriter in the 1980s Synthpop band Spandau Ballet?',
         'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'alternatives': {1: 'Gary Kemp', 
+						 2: 'Marc Almond', 
+						 3: 'Dave Ball', 
+						 4: 'Gene Pitney'}
     },
     {
         'song': 'spotify:track:1XY43BtmFLWyw9VAtXXkRl',
-        'question': 'Question 5?',
-        'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'question': 'Who has been the lead singer of The Bangles?',
+        'correct_answer': 3,
+        'alternatives': {1: 'Vicki Peterson', 
+						 2: 'Annette Zilinskas', 
+						 3: 'Suzanna Hoffs', 
+						 4: 'Debbi Peterson'}
     },
     {
-        'song': 'spotify:track:6vyStw2mr0Eq3izsBjJj4R',
-        'question': 'Question 6?',
+        'song': 'spotify:track:1bcklQyAGzDxQiNMczMLt6',
+        'question': 'Which year where the single Pour Some Sugar On Me with Def Leppard released?',
         'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'alternatives': {1: '1988', 
+						 2: '1984', 
+						 3: '1989', 
+						 4: '1986'}
     },
     {
         'song': 'spotify:track:6M2yXptUBeS7fonzVIcibo',
