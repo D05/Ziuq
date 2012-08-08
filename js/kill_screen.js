@@ -1,5 +1,5 @@
 var sp = getSpotifyApi();
-// var models = sp.require('sp://import/scripts/api/models');
+var models = sp.require('sp://import/scripts/api/models');
 // var views  = sp.require('sp://import/scripts/api/views');
 // var auth   = sp.require('sp://import/scripts/api/auth');
 
@@ -21,6 +21,16 @@ exports.run = function(maindiv, results, cbk) {
            console.log(questions[i].alternatives[questions[i].correct_answer]);
            console.log(Math.round(s));
            console.log(results.times[i]);
+       });
+
+       $('#save_playlist').click(function() {
+           var button = $(this);
+           button.unbind('click');
+           button.attr('disabled', true);
+
+           var playlist = new models.Playlist('Ziuq: ' + results.quiz.name);
+           questions.forEach(function(question) { playlist.add(question.song); });
+           button.html('√ Saved');
        });
     });
 }
