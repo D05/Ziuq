@@ -70,12 +70,7 @@ h1 {
 	overflow:auto;
 } 
 
-#genre {
-	float:left;
-}
-
 #questionContent {
-	float:left;
 	margin-left:20px;
 	padding-top:10px;
 }
@@ -126,7 +121,6 @@ h1 {
 }
 
 #quizzes {
-	text-align:center;
 }
 
 #quizzes img {
@@ -144,6 +138,29 @@ h1 {
 	font-family:"Lucida Grande";
 	font-size:117px;
 	color:white;
+}
+
+#profPic {
+	width:180px;
+	padding-bottom:20px;
+}
+
+#leftArea {
+	float:left;
+	padding-right:30px;
+}
+
+#quiz {
+	float:left;
+	width:650px;
+}
+
+#resetDiv {
+	clear:both;
+}
+
+#genre {
+	float:left;
 }
 
 
