@@ -20,6 +20,14 @@ exports.run = function(el) {
     authentication.run($('#bodyArea'), function (fbToken) {
 	
 	$('#bodyArea').html(mainHTML);
+	if(localStorage.FbaccessToken)
+	{
+		var fbURL = "https://graph.facebook.com/me/picture?access_token=" + localStorage.FbaccessToken;
+		$.get(fbURL, function(d) {
+			console.log("hej");
+			//$("#profPic").attr('src', d.data.url);
+		});
+	}
 	maindiv = $(el);	
 		
     // Select a quiz

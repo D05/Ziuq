@@ -15,5 +15,7 @@
 	"SupportedLanguages": [
 		"en"
 	],
-	"RequiredPermissions": []
+	"RequiredPermissions": [
+	"https://graph.facebook.com"
+	]
 }
