@@ -16,9 +16,11 @@ exports.run = function(maindiv, results, cbk) {
        $('#cntCorrect').html(results.cntCorrect);
        $('#score').html(Math.round(results.score));
        results.scores.forEach(function(s, i) {
+           var alts = questions[i].alternatives;
            console.log(questions[i].song);
            console.log(questions[i].question);
-           console.log(questions[i].alternatives[questions[i].correct_answer]);
+           console.log(alts[results.answers[i]]);
+           console.log(alts[questions[i].correct_answer]);
            console.log(Math.round(s));
            console.log(results.times[i]);
        });

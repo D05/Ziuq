@@ -25,13 +25,14 @@ exports.run = function(el) {
     countdown.run(maindiv, quiz, function() {
 
     // Run the quiz
-    quizzer.run(maindiv, quiz, function(scores,  times) {
+    quizzer.run(maindiv, quiz, function(scores,  times, answers) {
 
     var score = 0;
     scores.forEach(function(s) { score += s; });
 
     // show killscreen
     var results = {
+        'answers':      answers,
         'scores':       scores,
         'times':        times,
         'cntTotal':     scores.length,

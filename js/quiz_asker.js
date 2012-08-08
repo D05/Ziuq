@@ -17,32 +17,33 @@ exports.run = function(questionNo, cntTotal, question, cbks) {
 
         $('.answer').css('background', '#DAEDE2')
         $('#A .answerText').html(question.alternatives[1]);
-        $('#A').data('no', 1);
+        $('#A').data('num', 1);
         $('#B .answerText').html(question.alternatives[2]);
-        $('#B').data('no', 2);
+        $('#B').data('num', 2);
         $('#C .answerText').html(question.alternatives[3]);
-        $('#C').data('no', 3);
+        $('#C').data('num', 3);
         $('#D .answerText').html(question.alternatives[4]);
-        $('#D').data('no', 4);
+        $('#D').data('num', 4);
 
         var time = now();
         var timeout_id = setTimeout(function() { cbks.onIncorrect(); cbks.onComplete(); }, track.duration);
         $('.answer').click(function() {
             $('.answer').unbind('click');
             clearTimeout(timeout_id);
-
             var answer = $(this);
-            if (answer.data('no') == question.correct_answer) {
+            var answer_num = answer.data('num');
+
+            if (answer_num == question.correct_answer) {
                 var timediff = (now() - time) / 1000.0;
-                cbks.onCorrect(timediff);
+                cbks.onCorrect(answer_num, timediff);
                 answer.css('background', 'rgb(119,211,125)');
                 setTimeout(function() { cbks.onComplete(); }, 500);
             } else {
-                cbks.onIncorrect();
+                cbks.onIncorrect(answer_num);
                 answer.css('background', 'rgb(210,107,90)');
                 $('.answer').each(function(i,a) {
                     var a = $(a);
-                    if (a.data('no') == question.correct_answer)
+                    if (a.data('num') == question.correct_answer)
                     {
                         setTimeout(function() {
                             a.css('background', 'rgb(119,211,125)');

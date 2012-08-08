@@ -10,6 +10,7 @@ var template = sp.require('js/template');
 var i = 0;
 
 var questions;
+var answers = new Array;
 var scores = new Array;
 var times = new Array;
 
@@ -22,18 +23,20 @@ var tick = function(maindiv, quiz, cbk) {
         i = i + 1;
 
         quiz_asker.run(i, questions.length, question, {
-            onCorrect:   function(time) {
+            onCorrect:   function(answer, time) {
                 times.push(time);
                 scores.push(100.0/time);
+                answers.push(answer);
             },
-            onIncorrect: function() {
+            onIncorrect: function(answer) {
                 times.push(0);
                 scores.push(0);
+                answers.push(answer);
             },
             onComplete:  function() { tick(); },
         });
     } else {
-        callback(scores, times);
+        callback(scores, times, answers);
     }
 }
 
