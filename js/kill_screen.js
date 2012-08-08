@@ -6,7 +6,6 @@ var sp = getSpotifyApi();
 var template = sp.require('js/template');
 
 exports.run = function(maindiv, results, cbk) {
-    console.log(maindiv);
     template.fetchInto(maindiv, 'kill_screen', function() {
        $('#quiz_name').html(results.quiz.name);
        $('#cntTotal').html(results.cntTotal);
