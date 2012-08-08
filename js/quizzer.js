@@ -5,6 +5,7 @@ var sp = getSpotifyApi();
 
 var quiz_questions = sp.require('js/quiz_questions');
 var quiz_asker = sp.require('js/quiz_asker');
+var template = sp.require('js/template');
 
 var i = 0;
 var cntCorrect = 0;
@@ -13,7 +14,7 @@ var score = 0;
 
 var questions;
 
-var theCallback, theQuiz, theMaindiv;
+var callback;
 
 var tick = function(maindiv, quiz, cbk) {
     var question = questions[i];
@@ -21,7 +22,7 @@ var tick = function(maindiv, quiz, cbk) {
     if (question) {
         i = i + 1;
 
-        quiz_asker.run(theMaindiv, theQuiz, i, questions.length, question, {
+        quiz_asker.run(i, questions.length, question, {
             onCorrect:   function(time) {
                 cntCorrect = cntCorrect + 1;
                 score = score + (100.0/time);
@@ -30,15 +31,17 @@ var tick = function(maindiv, quiz, cbk) {
             onComplete:  function() { tick(); },
         });
     } else {
-        theCallback(theQuiz, score, questions.length, cntCorrect, cntIncorrect);
+        callback(score, questions.length, cntCorrect, cntIncorrect);
     }
 }
 
 exports.run = function(maindiv, quiz, cbk) {
     questions = quiz_questions.questions[quiz.id];
-    theMaindiv = maindiv;
-    theQuiz = quiz;
-    theCallback = cbk;
+    callback = cbk;
 
-    tick();
+    template.fetchInto(maindiv, 'question', function() {
+        $('img#genre').attr('src', quiz.image);
+
+        tick();
+    });
 }
