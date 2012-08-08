@@ -90,6 +90,7 @@ h1 {
 	min-width:240px;
 	background:#daede2;
 	vertical-align:bottom;
+    cursor: pointer;
 }
 
 #questionContent p, #questionContent span {
