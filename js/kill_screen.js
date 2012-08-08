@@ -12,5 +12,6 @@ exports.run = function(maindiv, results, cbk) {
        $('#cntTotal').html(results.cntTotal);
        $('#cntIncorrect').html(results.cntIncorrect);
        $('#cntCorrect').html(results.cntCorrect);
+       $('#score').html(Math.round(results.score));
     });
 }
