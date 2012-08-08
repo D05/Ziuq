@@ -18,10 +18,13 @@ var dummyQuestionSet = [
 						 4: '10'}
     },
     {
-        'song': 'spotify:track:1nbMkRhfldXcmCyB83x8lK',
-        'question': 'What was A-ha`s Pal Waaktarr nickname at school?',
-        'correct_answer': 2,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'song': 'spotify:track:4NH4xiPQ7TqNGqj6pZV4ki',
+        'question': 'Culture Club won the Grammy for best new artist in 1984, who took home the award in 1985?',
+        'correct_answer': 3,
+        'alternatives': {1: 'Eurythmics', 
+						 2: 'Corey Hart', 
+						 3: 'Cyndi Lauper', 
+						 4: 'Frankie Goes to Hollywood'}
     },
     {
         'song': 'spotify:track:5eKgyCFiu3j5BFpkbUCFwX',
@@ -33,7 +36,7 @@ var dummyQuestionSet = [
 						 4: 'Gene Pitney'}
     },
     {
-        'song': 'spotify:track:1XY43BtmFLWyw9VAtXXkRl',
+        'song': 'spotify:track:1gb5sUe1CuRBuT8twq8uhw',
         'question': 'Who has been the lead singer of The Bangles?',
         'correct_answer': 3,
         'alternatives': {1: 'Vicki Peterson', 
@@ -51,28 +54,40 @@ var dummyQuestionSet = [
 						 4: '1986'}
     },
     {
-        'song': 'spotify:track:6M2yXptUBeS7fonzVIcibo',
-        'question': 'Question 7?',
-        'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'song': 'spotify:track:6AUYnTv5LXbWm2oHxN3QAw',
+        'question': 'The lead singer Mark Knopfler have been member of anohter band, which?',
+        'correct_answer': 3,
+        'alternatives': {1: 'Jellyfish', 
+						 2: 'Supertramp', 
+						 3: 'The Notting Hillbillies', 
+						 4: 'The Smithereens'}
     },
     {
-        'song': 'spotify:track:3PLjIPdFMmusBwULqzDcFG',
-        'question': 'Question 8?',
-        'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'song': 'spotify:track:6EoAUmLaog9mUTMDtdVudr',
+        'question': 'Which Debbie Gibson single spent the most time at the top of the charts?',
+        'correct_answer': 2,
+        'alternatives': {1: 'Only In My Dreams', 
+						 2: 'Foolish Beat', 
+						 3: 'Shake Your Love', 
+						 4: 'Lost In Your Eyes'}
     },
     {
-        'song': 'spotify:track:2KHZwI4EwQdWbNoVNNL1PO',
-        'question': 'Question 9?',
-        'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'song': 'spotify:track:2qeESyQyH7MRHCBotCQsNq',
+        'question': 'Where was the video shot for the Duran Duran song "Hungry Like The Wolf"?',
+        'correct_answer': 3,
+        'alternatives': {1: 'Boreno', 
+						 2: 'India', 
+						 3: 'Sri Lanka', 
+						 4: 'Thailand'}
     },
     {
-        'song': 'spotify:track:6aWav9o9Y4uRxxTkIk1SQs',
-        'question': 'Question 10?',
+        'song': 'spotify:track:0Z7O8GMQShj9TJrm2yX1R6',
+        'question': 'What famous hit song from the 80s did Eddie Van Halen play lead guitar on?',
         'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'alternatives': {1: 'Beat It', 
+						 2: 'Dirty Diana', 
+						 3: 'Talk Dirty to Me', 
+						 4: 'Here I Go Again'}
     }
 ]
 
