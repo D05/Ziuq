@@ -10,14 +10,18 @@ var quizzer        = sp.require('js/quizzer');
 var kill_screen    = sp.require('js/kill_screen');
 
 var maindiv;
+var mainHTML;
 
 // Quiz initialize
 exports.run = function(el) {
-    maindiv = $(el);
+	mainHTML = $('#bodyArea').html();
 
     // Auth to facebook
-    authentication.run(maindiv, function (fbToken) {
-
+    authentication.run($('#bodyArea'), function (fbToken) {
+	
+	$('#bodyArea').html(mainHTML);
+	maindiv = $(el);	
+		
     // Select a quiz
     quiz_selector.run(maindiv, function(quiz) {
 

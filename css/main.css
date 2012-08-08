@@ -70,12 +70,7 @@ h1 {
 	overflow:auto;
 } 
 
-#genre {
-	float:left;
-}
-
 #questionContent {
-	float:left;
 	margin-left:20px;
 	padding-top:10px;
 }
@@ -125,7 +120,7 @@ h1 {
 }
 
 #quizzes {
-	text-align:center;
+	text-align:left;
 }
 
 #quizzes img {
@@ -133,7 +128,6 @@ h1 {
 }
 
 #countdownContent {
-	float:left;
 	margin-left:60px;
 	padding-top:125px;
 }

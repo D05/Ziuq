@@ -4,7 +4,7 @@
     "VendorIdentifier": "com.d05.",
 	"BundleIdentifier": "ziuq",
 	"AppIcon": {
-		"36x18": "ziuq.png"
+		"36x18": "images/logo/logo_16.png"
 	},
 	"AppName": {
 		"en": "Ziuq"
