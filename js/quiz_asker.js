@@ -39,7 +39,6 @@ exports.run = function(maindiv, quiz, questionNo, cntTotal, question, cbks) {
 
         $('.answer').click(function() {
             clearTimeout(timeout_id);
-            $('.mainArea').css('display', 'none');
 
             if (answered) { return; }
             answered = true;
@@ -48,11 +47,14 @@ exports.run = function(maindiv, quiz, questionNo, cntTotal, question, cbks) {
             if (answer.data('no') == question.correct_answer) {
                 var timediff = (now() - time) / 1000.0;
                 cbks.onCorrect(timediff);
-                cbks.onComplete();
             } else {
                 cbks.onIncorrect();
-                cbks.onComplete();
             }
+
+            $('.mainArea').animate({'opacity': 0} , 400, function() {
+                $('.mainArea').css('display', 'none');
+                cbks.onComplete();
+            });
         });
     });
 
