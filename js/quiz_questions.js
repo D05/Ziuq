@@ -1,9 +1,12 @@
 var dummyQuestionSet = [
     {
-        'song': 'spotify:track:2G1UG8ObbwvVyeLXNzHuwQ',
-        'question': 'Question 1?',
+        'song': 'spotify:track:0OzwLNVnzfG43IyQB2RMPH',
+        'question': 'What was the name of the group Jim Kerr was in before Simply Minds?',
         'correct_answer': 1,
-        'alternatives': {1: 'A1', 2: 'A2', 3: 'A3', 4: 'A4'}
+        'alternatives': {1: 'Johnny and the Self Abusers', 
+						 2: 'The Regents', 
+						 3: 'The Electric Force', 
+						 4: 'The Stooges'}
     },
     {
         'song': 'spotify:track:2f7sZFUET4uJK83Kw12e1b',

@@ -10,14 +10,27 @@ var quizzer        = sp.require('js/quizzer');
 var kill_screen    = sp.require('js/kill_screen');
 
 var maindiv;
+var mainHTML;
 
 // Quiz initialize
 exports.run = function(el) {
-    maindiv = $(el);
+	mainHTML = $('#bodyArea').html();
 
     // Auth to facebook
-    authentication.run(maindiv, function (fbToken) {
-
+    authentication.run($('#bodyArea'), function (fbToken) {
+	
+	$('#bodyArea').html(mainHTML);
+	if(localStorage.FbaccessToken)
+	{
+		var fbURL = "https://graph.facebook.com/me/picture?type=large&access_token=" + localStorage.FbaccessToken;
+		$("#profPic").attr('src', fbURL);
+		/*$.get(fbURL, function(d) {
+			console.log(d);
+			$("#profPic").attr('src', d.data.url);
+		});*/
+	}
+	maindiv = $(el);	
+		
     // Select a quiz
     quiz_selector.run(maindiv, function(quiz) {
 
