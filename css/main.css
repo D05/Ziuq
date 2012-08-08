@@ -67,15 +67,48 @@ h1 {
 
 .questionArea {
 	clear:both;
+	overflow:auto;
 } 
 
-.questionArea -> img {
+#genre {
 	float:left;
 }
 
-.questionArea -> div {
+#questionContent {
 	float:left;
 	margin-left:20px;
+	padding-top:10px;
+}
+
+#questionContent table {
+	
+}
+
+#questionContent td {
+	padding:10px;
+	margin:1px;
+	min-width:240px;
+	background:#daede2;
+	vertical-align:bottom;
+}
+
+#questionContent p, #questionContent span {
+	font-family:"Lucida Grande";
+	font-size:20px;
+}
+
+#questionContent p {
+	color:white;
+	margin-bottom:20px;
+}
+
+#questionContent span {
+	color:black;
+	margin-left:10px;
+}
+
+#questionNumber {
+	font-size:15px !important;
 }
 
 
