@@ -25,7 +25,7 @@ var tick = function(maindiv, quiz, cbk) {
         quiz_asker.run(i, questions.length, question, {
             onCorrect:   function(answer, time) {
                 times.push(time);
-                scores.push(100.0/time);
+                scores.push(Math.round(100.0/time));
                 answers.push(answer);
             },
             onIncorrect: function(answer) {
