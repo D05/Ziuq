@@ -132,5 +132,17 @@ h1 {
 	margin:0 15px 30px;
 }
 
+#countdownContent {
+	float:left;
+	margin-left:60px;
+	padding-top:125px;
+}
+
+#countDownNumber {
+	font-family:"Lucida Grande";
+	font-size:117px;
+	color:white;
+}
+
 
 
