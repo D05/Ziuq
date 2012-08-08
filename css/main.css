@@ -120,8 +120,16 @@ h1 {
 .contentArea {
 	text-align:left;
 	margin:15px 40px 0 40px;
-	padding:20px;
+	padding:30px;
 	background:rgba(218,237,226,0.2);
+}
+
+#quizzes {
+	text-align:center;
+}
+
+#quizzes img {
+	margin:0 15px 30px;
 }
 
 
