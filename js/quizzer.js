@@ -11,6 +11,7 @@ var i = 0;
 
 var questions;
 var scores = new Array;
+var times = new Array;
 
 var callback;
 
@@ -22,15 +23,17 @@ var tick = function(maindiv, quiz, cbk) {
 
         quiz_asker.run(i, questions.length, question, {
             onCorrect:   function(time) {
+                times.push(time);
                 scores.push(100.0/time);
             },
             onIncorrect: function() {
+                times.push(0);
                 scores.push(0);
             },
             onComplete:  function() { tick(); },
         });
     } else {
-        callback(scores);
+        callback(scores, times);
     }
 }
 
